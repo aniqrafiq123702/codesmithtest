@@ -3,10 +3,10 @@
 
 import { createContext, useContext, useState } from "react";
 
-// Create a Context for authentication
+
 const AuthContext = createContext();
 
-// Create a provider component
+
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
   );
 }
 
-// Custom hook to use authentication context
+
 export function useAuth() {
   return useContext(AuthContext);
 }
